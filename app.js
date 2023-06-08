@@ -64,58 +64,34 @@ document.querySelectorAll('.navbar__links').forEach((link) => {
   });
 });
 
-let previousScrollPos = window.pageYOffset;
-let skillBarsAnimated = false;
-
 function handleScroll() {
-  const elements = document.querySelectorAll('.services__card, .aboutme-container, .aboutme-details, .aboutme-picture, .skill-progress');
+  const elements = document.querySelectorAll('.services__card, .aboutme-container, .aboutme-details, .aboutme-picture, .skill-bars');
 
   elements.forEach(element => {
     const threshold = window.innerHeight - (element.offsetHeight / 2);
 
     if (element.getBoundingClientRect().top <= threshold && !element.classList.contains('fade-in')) {
       element.classList.add('fade-in');
-      if (element.classList.contains('skill-progress') && !skillBarsAnimated) {
-        const progressBar = element.querySelector('.progress-bar.filled');
-        const progressPercent = parseInt(progressBar.style.width);
-        animateProgressBar(progressBar, progressPercent);
-        skillBarsAnimated = true;
+      if (element.classList.contains('skill-progress')) {
+        animateSkillBar(element);
       }
     } else if (element.getBoundingClientRect().top > threshold && element.classList.contains('fade-in')) {
       element.classList.remove('fade-in');
       if (element.classList.contains('skill-progress')) {
-        const progressBar = element.querySelector('.progress-bar.filled');
-        progressBar.style.width = '0';
+        resetSkillBar(element);
       }
     }
   });
-
-  // Check if scrolling direction is reversed (scrolling up)
-  const currentScrollPos = window.pageYOffset;
-  if (currentScrollPos < previousScrollPos) {
-    skillBarsAnimated = false;
-  }
-
-  previousScrollPos = currentScrollPos;
 }
 
-function animateProgressBar(progressBar, targetWidth) {
-  let width = 0;
-  const animationDuration = 1000; // Adjust the duration as desired
-  const frameDuration = 10;
-  const frames = Math.ceil(animationDuration / frameDuration);
-  const increment = targetWidth / frames;
+function animateSkillBar(element) {
+  const progressBar = element.querySelector('.progress-bar.filled');
+  progressBar.style.opacity = 1;
+}
 
-  const animate = () => {
-    width += increment;
-    progressBar.style.width = `${width}%`;
-
-    if (width < targetWidth) {
-      requestAnimationFrame(animate);
-    }
-  };
-
-  requestAnimationFrame(animate);
+function resetSkillBar(element) {
+  const progressBar = element.querySelector('.progress-bar.filled');
+  progressBar.style.opacity = 0;
 }
 
 window.addEventListener('scroll', handleScroll);
@@ -123,7 +99,4 @@ window.addEventListener('load', handleScroll);
 window.addEventListener('resize', handleScroll);
 
 handleScroll();
-
-
-
 
