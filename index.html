@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Navbar Section -->
   <nav class="navbar">
     <div class="navbar__container">
       <div class="navbar__toggle" id="mobile-menu">
@@ -60,345 +62,324 @@
       </ul>
     </div>
   </nav>
-  
 
-    <!-- Hero Section -->
-    <div class="main" id="main">
-      <img src="Images/nyc.jpg" alt="" class="main__background">
-      <div class="main__container">
-        <div class="main__content">
-          <h1>Welcome, my name is</h1>
-          <h2>Ishan Sheth.</h2> 
-          <div class="image-grid">
-            <a href="https://www.linkedin.com/in/isheth" target="_blank">
-              <img src="Images/linkedin.png" alt="" class="small_images">
-            </a>
-            <a href="https://github.com/ishansheth-31" target="_blank">
-              <img src="Images/github.png" alt="" class="small_images">
-            </a>
-            <a href="https://www.instagram.com/ishansheth31" target="_blank">
-              <img src="Images/instagram.png" alt="" class="small_images">
-            </a>
-            <a href="mailto:kevishan@gmail.com">
-              <img src="Images/email3.png" alt="" class="small_images">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="main__arrow">
-        <a href="#about">
-          <img src="Images/downbutton.png" alt="Down Arrow">
-        </a>
-        <script>
-          document.querySelector('.main__arrow').addEventListener('click', function(event) {
-            event.preventDefault();
-            document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
-          });
-        </script>
-      </div>
-    </div>    
-    <script src="app.js"></script>
-
-
-    <div class="aboutme" id="about">
-      <h2>About Me</h2>
-      <div class="aboutme-container">
-        <div class="aboutme-details">
-          <div class="aboutme-content">
-            <p><b>Hi! I'm Ishan Sheth. </b>I am a second-year student at Georgia Tech pursuing a B.S. in Computer Science with a minor in Economics. With specializations in Artificial Intelligence and Systems and Architectures, I am particularly curious about the fields of Generative AI and High-Performance Computing. My other interests lie in investing, mental health technologies, and sports analytics, and I aim to merge my technical skills and domain knowledge to make a meaningful impact at the intersection of technology and finance.</p>
-            <p>In my free time, I love to play jazz saxophone, cook new foods, and play pickup basketball. I also have a podcast that covers NBA and NFL-related content that you can view <a href="https:www.triplethreatpodcast.com">here</a>.</p>
-          </div>
-          <div class="aboutme-buttons">
-            <a href="Extras/ISHAN_SHETH_RESUME.docx (1).pdf" download>Download Resume</a>
-            <a href="Extras/vcard.vcf" download class="contact">Download Contact Card</a>
-          </div>
-        </div>
-        <div class="aboutme-picture">
-          <img src="Images/photo.png" alt="Profile Picture">
+  <!-- Main Section -->
+  <div class="main" id="main">
+    <img src="Images/nyc.jpg" alt="" class="main__background">
+    <div class="main__container">
+      <div class="main__content">
+        <h1>Welcome, my name is</h1>
+        <h2>Ishan Sheth.</h2> 
+        <div class="image-grid">
+          <a href="https://www.linkedin.com/in/isheth" target="_blank">
+            <img src="Images/linkedin.png" alt="" class="small_images">
+          </a>
+          <a href="https://github.com/ishansheth-31" target="_blank">
+            <img src="Images/github.png" alt="" class="small_images">
+          </a>
+          <a href="https://www.instagram.com/ishansheth31" target="_blank">
+            <img src="Images/instagram.png" alt="" class="small_images">
+          </a>
+          <a href="mailto:kevishan@gmail.com">
+            <img src="Images/email3.png" alt="" class="small_images">
+          </a>
         </div>
       </div>
     </div>
+    <div class="main__arrow">
+      <a href="#about">
+        <img src="Images/downbutton.png" alt="Down Arrow">
+      </a>
+      <script>
+        document.querySelector('.main__arrow').addEventListener('click', function(event) {
+          event.preventDefault();
+          document.querySelector('#about').scrollIntoView({ behavior: 'smooth' });
+        });
+      </script>
+    </div>
+  </div>    
+  <script src="app.js"></script>
+
+  <!-- About Section -->
+  <div class="aboutme" id="about">
+    <h2>About Me</h2>
+    <div class="aboutme-container">
+      <div class="aboutme-details">
+        <div class="aboutme-content">
+          <p><b>Hi! I'm Ishan Sheth. </b>I am a second-year student at Georgia Tech pursuing a B.S. in Computer Science with a minor in Economics. With specializations in Artificial Intelligence and Systems and Architectures, I am particularly curious about the fields of Generative AI and High-Performance Computing. My other interests lie in investing, mental health technologies, and sports analytics, and I aim to merge my technical skills and domain knowledge to make a meaningful impact at the intersection of technology and finance.</p>
+          <p>In my free time, I love to play jazz saxophone, cook new foods, and play pickup basketball. I also have a podcast that covers NBA and NFL-related content that you can view <a href="https:www.triplethreatpodcast.com">here</a>.</p>
+        </div>
+        <div class="aboutme-buttons">
+          <a href="Extras/ISHAN_SHETH_RESUME.docx (1).pdf" download>Download Resume</a>
+          <a href="Extras/vcard.vcf" download class="contact">Download Contact Card</a>
+        </div>
+      </div>
+      <div class="aboutme-picture">
+        <img src="Images/photo.png" alt="Profile Picture">
+      </div>
+    </div>
+  </div>
     
-
-
-    <div class="skills" id="skills">
-      <h1>Skills</h1>
-      <div class="skill-bars">
-        <div class="skill-bar">
-          <div class="skill-label">Python</div>
-          <div class="skill-progress">
-            <div class="progress-bar filled" style="width: 90%;"></div>
-            <div class="progress-bar unfilled"></div>
-            <span class="progress-percent">90%</span>
-          </div>
+  <!-- Skills Section -->
+  <div class="skills" id="skills">
+    <h1>Skills</h1>
+    <div class="skill-bars">
+      <div class="skill-bar">
+        <div class="skill-label">Python</div>
+        <div class="skill-progress">
+          <div class="progress-bar filled" style="width: 90%;"></div>
+          <div class="progress-bar unfilled"></div>
+          <span class="progress-percent">90%</span>
         </div>
-        <div class="skill-bar">
-          <div class="skill-label">Java</div>
-          <div class="skill-progress">
-            <div class="progress-bar filled" style="width: 80%;"></div>
-            <div class="progress-bar unfilled"></div>
-            <span class="progress-percent">80%</span>
-          </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-label">Java</div>
+        <div class="skill-progress">
+          <div class="progress-bar filled" style="width: 80%;"></div>
+          <div class="progress-bar unfilled"></div>
+          <span class="progress-percent">80%</span>
         </div>
-        <div class="skill-bar">
-          <div class="skill-label">SQL</div>
-          <div class="skill-progress">
-            <div class="progress-bar filled" style="width: 60%;"></div>
-            <div class="progress-bar unfilled"></div>
-            <span class="progress-percent">60%</span>
-          </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-label">SQL</div>
+        <div class="skill-progress">
+          <div class="progress-bar filled" style="width: 60%;"></div>
+          <div class="progress-bar unfilled"></div>
+          <span class="progress-percent">60%</span>
         </div>
-        <div class="skill-bar">
-          <div class="skill-label">Pandas/Numpy/Matplotlib</div>
-          <div class="skill-progress">
-            <div class="progress-bar filled" style="width: 90%;"></div>
-            <div class="progress-bar unfilled"></div>
-            <span class="progress-percent">90%</span>
-          </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-label">Pandas/Numpy/Matplotlib</div>
+        <div class="skill-progress">
+          <div class="progress-bar filled" style="width: 90%;"></div>
+          <div class="progress-bar unfilled"></div>
+          <span class="progress-percent">90%</span>
         </div>
-        <div class="skill-bar">
-          <div class="skill-label">TensorFlow</div>
-          <div class="skill-progress">
-            <div class="progress-bar filled" style="width: 70%;"></div>
-            <div class="progress-bar unfilled"></div>
-            <span class="progress-percent">70%</span>
-          </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-label">TensorFlow</div>
+        <div class="skill-progress">
+          <div class="progress-bar filled" style="width: 70%;"></div>
+          <div class="progress-bar unfilled"></div>
+          <span class="progress-percent">70%</span>
         </div>
-        <div class="skill-bar">
-          <div class="skill-label">Git</div>
-          <div class="skill-progress">
-            <div class="progress-bar filled" style="width: 70%;"></div>
-            <div class="progress-bar unfilled"></div>
-            <span class="progress-percent">70%</span>
-          </div>
+      </div>
+      <div class="skill-bar">
+        <div class="skill-label">Git</div>
+        <div class="skill-progress">
+          <div class="progress-bar filled" style="width: 70%;"></div>
+          <div class="progress-bar unfilled"></div>
+          <span class="progress-percent">70%</span>
         </div>
       </div>
     </div>
-    
-    
-    
-    
+  </div>
 
-
-
-    <div class="services" id="services">
-      <h1>Experience</h1>
-      <div class="services__container">
-        <div class="services__card">
-          <div class="services__image">
-            <img src="Images/Sensai.png" alt="SensAI">
-          </div>
-          <div class="services__content">
-            <h2>SensAI</h2>
-            <h3>Co-Founder</h3>
-            <p>
-              Designed an app to improve the mental health of children with neuromotor disabilities by providing cognitive therapy games with social gaming features.
-              I developed accessible games utilizing computer vision and conducted market research by interviewing hundreds of stakeholders, paving the way for future development.<br><br>
-              <b>Winner of 2023 EGHI/Georgia Tech Global Health Hackathon</b>
-              </p>
-            <p>Feb 2023 - Present</p>
+  <!-- Services/Experience Section -->
+  <div class="services" id="services">
+    <h1>Experience</h1>
+    <div class="services__container">
+      <div class="services__card">
+        <div class="services__image">
+          <img src="Images/Sensai.png" alt="SensAI">
+        </div>
+        <div class="services__content">
+          <h2>SensAI</h2>
+          <h3>Co-Founder</h3>
+          <p>
+            Designed an app to improve the mental health of children with neuromotor disabilities by providing cognitive therapy games with social gaming features.
+            I developed accessible games utilizing computer vision and conducted market research by interviewing hundreds of stakeholders, paving the way for future development.<br><br>
+            <b>Winner of 2023 EGHI/Georgia Tech Global Health Hackathon</b>
+            </p>
+          <p>Feb 2023 - Present</p>
+        </div>
+      </div>
+      <div class="services__card">
+        <div class="services__image">
+          <img src="Images/gtsf.jpg" alt="SensAI">
+        </div>
+        <div class="services__content">
+          <h2>GTSF Investments Commmitee</h2>
+          <h3>Quantitative Analyst</h3>
+          <p>After completing a semester-long investments course, I am developing investment strategies utilizing quantitative models, contributing to the growth of a $2.1M AUM student-run endowment fund. I am utilizing Bloomberg Terminal, Excel, and Python to implement a VC2-based algorithm, managing assets valued at over $20,000.
+            </p>
+          <p>April 2023 - Present</p>
+        </div>
+      </div>
+      <div class="services__card">
+        <div class="services__image">
+          <img src="Images/gatech.png" alt="Center for the Study of Systems Biology">
+        </div>
+        <div class="services__content">
+          <h2>Center for the Study of Systems Biology</h2>
+          <h3>Researcher</h3>
+          <p> I spent the semester researching repurposed drugs for patients with Eosinophilic esophagitis under Dr. Jeffrey Skolnick. I
+          conducted an analysis of the Th2 and epithelial barrier dysfunction pathways and researched repurposed drug options such as monoclonal antibodies and molecules alpha-L-fucose and beta-D-glucose.</p>
+          <p>Dec 2022 - May 2023</p>
+          <div class="exp_buttons">
+            <a href="Extras/Research Report.pdf" download>Download My Report Here</a>
+            <a href="Extras/5-4_FinalPresentation.pdf" download>Download My Presentation Here</a>
           </div>
         </div>
-        <div class="services__card">
-          <div class="services__image">
-            <img src="Images/gtsf.jpg" alt="SensAI">
-          </div>
-          <div class="services__content">
-            <h2>GTSF Investments Commmitee</h2>
-            <h3>Quantitative Analyst</h3>
-            <p>After completing a semester-long investments course, I am developing investment strategies utilizing quantitative models, contributing to the growth of a $2.1M AUM student-run endowment fund. I am utilizing Bloomberg Terminal, Excel, and Python to implement a VC2-based algorithm, managing assets valued at over $20,000.
-              </p>
-            <p>April 2023 - Present</p>
+      </div>
+      <div class="services__card">
+        <div class="services__image">
+          <img src="Images/spt.png" alt="SensAI">
+        </div>
+        <div class="services__content">
+          <h2>Splitit</h2>
+          <h3>Data Science Intern</h3>
+          <p>I built a production-ready tool for Splitit's sales team using Python, Postman API, and Jenkins to analyze hundreds of e-commerce sites. I also developed an ML model using Scikit Learn, Snowflake, and Salesforce to predict client acquisition with 85% accuracy, leading to a revamped strategy in the sales team's lead targeting.              </p>
+          <p>Jun 2022 - Aug 2022</p>
+        </div>
+      </div>
+      <div class="services__card">
+        <div class="services__image">
+          <img src="Images/mirus.png" alt="SensAI">
+        </div>
+        <div class="services__content">
+          <h2>MiRus</h2>
+          <h3>Software Intern and Researcher</h3>
+          <p>2019: I developed a Python program to automatically read pharmaceutical labels for an automated drug delivery robot prototype. <br>
+            2020: I built a Python program for MiRus’ GALILEO system to analyze MRI data and render 3D vertebrae images, allowing surgeons globally to diagnose spinal conditions. <br>
+            2021: I co-authored a manuscript that evaluates the hydrophilicity and bacterial growth of the MoRe alloy for spinal implants, comparing it to industry standards.
+            </p>
+          <p>Jun 2019 - Jul 2021</p>
+          <div class="exp_buttons">
+            <a href="https://www.thespinejournalonline.com/article/S1529-9430(23)00020-7/fulltext">Paper Published in The Spine Journal</a>
           </div>
         </div>
-        <div class="services__card">
-          <div class="services__image">
-            <img src="Images/gatech.png" alt="Center for the Study of Systems Biology">
-          </div>
-          <div class="services__content">
-            <h2>Center for the Study of Systems Biology</h2>
-            <h3>Researcher</h3>
-            <p> I spent the semester researching repurposed drugs for patients with Eosinophilic esophagitis under Dr. Jeffrey Skolnick. I
-            conducted an analysis of the Th2 and epithelial barrier dysfunction pathways and researched repurposed drug options such as monoclonal antibodies and molecules alpha-L-fucose and beta-D-glucose.</p>
-            <p>Dec 2022 - May 2023</p>
-            <div class="exp_buttons">
-              <a href="Extras/Research Report.pdf" download>Download My Report Here</a>
-              <a href="Extras/5-4_FinalPresentation.pdf" download>Download My Presentation Here</a>
-            </div>
-          </div>
+      </div>
+      <div class="services__card">
+        <div class="services__image">
+          <img src="Images/3dprc.jpg" alt="SensAI">
         </div>
-        <div class="services__card">
-          <div class="services__image">
-            <img src="Images/spt.png" alt="SensAI">
-          </div>
-          <div class="services__content">
-            <h2>Splitit</h2>
-            <h3>Data Science Intern</h3>
-            <p>I built a production-ready tool for Splitit's sales team using Python, Postman API, and Jenkins to analyze hundreds of e-commerce sites. I also developed an ML model using Scikit Learn, Snowflake, and Salesforce to predict client acquisition with 85% accuracy, leading to a revamped strategy in the sales team's lead targeting.              </p>
-            <p>Jun 2022 - Aug 2022</p>
-          </div>
-        </div>
-        <div class="services__card">
-          <div class="services__image">
-            <img src="Images/mirus.png" alt="SensAI">
-          </div>
-          <div class="services__content">
-            <h2>MiRus</h2>
-            <h3>Software Intern and Researcher</h3>
-            <p>2019: I developed a Python program to automatically read pharmaceutical labels for an automated drug delivery robot prototype. <br>
-              2020: I built a Python program for MiRus’ GALILEO system to analyze MRI data and render 3D vertebrae images, allowing surgeons globally to diagnose spinal conditions. <br>
-              2021: I co-authored a manuscript that evaluates the hydrophilicity and bacterial growth of the MoRe alloy for spinal implants, comparing it to industry standards.
-              </p>
-            <p>Jun 2019 - Jul 2021</p>
-            <div class="exp_buttons">
-              <a href="https://www.thespinejournalonline.com/article/S1529-9430(23)00020-7/fulltext">Paper Published in The Spine Journal</a>
-            </div>
-          </div>
-        </div>
-        <div class="services__card">
-          <div class="services__image">
-            <img src="Images/3dprc.jpg" alt="SensAI">
-          </div>
-          <div class="services__content">
-            <h2>Georgia Tech 3D PRC</h2>
-            <h3>Software Intern</h3>
-            <p> I studied neural networks and their applications in System on Package technologies under Professor Madhavan Swaminathan and created two feed-forward neural networks using the Python TensorFlow library to analyze frequencies of solenoidal inductors in modern computer chips. </p>
-            <p>Jul 2021</p>
-          </div>
+        <div class="services__content">
+          <h2>Georgia Tech 3D PRC</h2>
+          <h3>Software Intern</h3>
+          <p> I studied neural networks and their applications in System on Package technologies under Professor Madhavan Swaminathan and created two feed-forward neural networks using the Python TensorFlow library to analyze frequencies of solenoidal inductors in modern computer chips. </p>
+          <p>Jul 2021</p>
         </div>
       </div>
     </div>
-    
-    
-    
+  </div>
 
-<!-- Education Section -->
-<div class="education" id="education">
-  <h1>Education</h1>
-  <div class="education_container">
-    <div class="education_card">
-      <div class="education_card_image" onclick="openPopup('gatech')">
-        <div class="hover_effect">
-          <span class="hover_text">More Info</span>
+  <!-- Education Section -->
+  <div class="education" id="education">
+    <h1>Education</h1>
+    <div class="education_container">
+      <div class="education_card">
+        <div class="education_card_image" onclick="openPopup('gatech')">
+          <div class="hover_effect">
+            <span class="hover_text">More Info</span>
+          </div>
+          <img src="Images/gatech.png" alt="School Logo 1">
         </div>
-        <img src="Images/gatech.png" alt="School Logo 1">
+        <h2>Georgia Institute of Technology</h2>
       </div>
+      <div class="education_card">
+        <div class="education_card_image" onclick="openPopup('westminster')">
+          <div class="hover_effect">
+            <span class="hover_text">More Info</span>
+          </div>
+          <img src="Images/Westminster_schools_seal.png" alt="School Logo 2">
+        </div>
+        <h2>The Westminster Schools</h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup for Georgia Tech -->
+  <div id="popup-gatech" class="popup">
+    <div class="popup_content">
       <h2>Georgia Institute of Technology</h2>
+      <p>Years: 2022-2025</p>
+      <p>GPA: 3.85/4</p>
+      <p>Major: Computer Science</p>
+      <p>Concentrations: Artificial Intelligence and Systems and Architectures</p>
+      <p>Minor: Economics</p>
+      <p>Activities: Delta Chi Fraternity, Startup Exchange, Consult Your Community, Student Government Association, Intramural Basketball</p>
+      <button class="close_button" onclick="closePopup('gatech')">Close</button>
     </div>
-    <div class="education_card">
-      <div class="education_card_image" onclick="openPopup('westminster')">
-        <div class="hover_effect">
-          <span class="hover_text">More Info</span>
-        </div>
-        <img src="Images/Westminster_schools_seal.png" alt="School Logo 2">
-      </div>
+  </div>
+
+  <!-- Popup for Westminster -->
+  <div id="popup-westminster" class="popup">
+    <div class="popup_content">
       <h2>The Westminster Schools</h2>
+      <p>Years: 2018-2022</p>
+      <p>Activities: START Atlanta, Cross Country, FRC 2415 WiredCats, Wind Ensemble, Jazz Band, Discipline Council</p>
+      <button class="close_button" onclick="closePopup('westminster')">Close</button>
     </div>
   </div>
-</div>
 
-
-<!-- Popup for Georgia Tech -->
-<div id="popup-gatech" class="popup">
-  <div class="popup_content">
-    <h2>Georgia Institute of Technology</h2>
-    <p>Years: 2022-2025</p>
-    <p>GPA: 3.85/4</p>
-    <p>Major: Computer Science</p>
-    <p>Concentrations: Artificial Intelligence and Systems and Architectures</p>
-    <p>Minor: Economics</p>
-    <p>Activities: Delta Chi Fraternity, Startup Exchange, Consult Your Community, Student Government Association, Intramural Basketball</p>
-    <button class="close_button" onclick="closePopup('gatech')">Close</button>
-
-  </div>
-</div>
-
-<!-- Popup for Westminster Schools -->
-<div id="popup-westminster" class="popup">
-  <div class="popup_content">
-    <h2>The Westminster Schools</h2>
-    <p>Years: 2018-2022</p>
-    <p>Activities: START Atlanta, Cross Country, FRC 2415 WiredCats, Wind Ensemble, Jazz Band, Discipline Council</p>
-    <button class="close_button" onclick="closePopup('westminster')">Close</button>
-
-  </div>
-</div>
-
-
-
-
-
-
-<div class="projects_wrapper" id="projects">
-  <h1>Projects</h1>
   <!-- Projects Section -->
-  <div class="projects">
-    <div class="projects_card">
-      <div class="projects_card_top">
-        <img src="Images/indstudy.png" alt="Project Image">
-      </div>
-      <div class="projects_card_bottom">
-        <h2>NBA Game Predictor</h2>
-        <p>Web application that predicts the outcome of NBA games based on a homemmade rolling 7-game average dataset.</p>
-        <div class="exp_buttons">
-          <a href="https://github.com/ishansheth-31/independentstudy">GitHub</a>
-          <a href="https://ishansheth-31-independentstudy-sttester-0p15wl.streamlit.app/">Web App</a>
+  <div class="projects_wrapper" id="projects">
+    <h1>Projects</h1>
+    <!-- Projects Section -->
+    <div class="projects">
+      <div class="projects_card">
+        <div class="projects_card_top">
+          <img src="Images/indstudy.png" alt="Project Image">
+        </div>
+        <div class="projects_card_bottom">
+          <h2>NBA Game Predictor</h2>
+          <p>Web application that predicts the outcome of NBA games based on a homemmade rolling 7-game average dataset.</p>
+          <div class="exp_buttons">
+            <a href="https://github.com/ishansheth-31/independentstudy">GitHub</a>
+            <a href="https://ishansheth-31-independentstudy-sttester-0p15wl.streamlit.app/">Web App</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="projects_card">
-      <div class="projects_card_top">
-        <img src="Images/goodaction.png.jpg" alt="Project Image">
-      </div>
-      <div class="projects_card_bottom">
-        <h2>GoodAction</h2>
-        <p>Pro bono consulting project for a company dedicated to enhancing businesses' ESG ratings through connections with nonprofits.</p>
-        <div class="exp_buttons">
-          <a href="Extras/GoodAction_ Final Presentation.pdf" download>Final Presentation</a>
+      <div class="projects_card">
+        <div class="projects_card_top">
+          <img src="Images/goodaction.png.jpg" alt="Project Image">
+        </div>
+        <div class="projects_card_bottom">
+          <h2>GoodAction</h2>
+          <p>Pro bono consulting project for a company dedicated to enhancing businesses' ESG ratings through connections with nonprofits.</p>
+          <div class="exp_buttons">
+            <a href="Extras/GoodAction_ Final Presentation.pdf" download>Final Presentation</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="projects_card">
-      <div class="projects_card_top">
-        <img src="Images/website.png" alt="Project Image">
-      </div>
-      <div class="projects_card_bottom">
-        <h2>My Website</h2>
-        <p>Ironic...Used HTML, CSS, and JavaScript to build this website. For more info, check out the Github using the button below.</p>
-        <div class="exp_buttons">
-          <a href="https://github.com/ishansheth-31/independentstudy">GitHub</a>
+      <div class="projects_card">
+        <div class="projects_card_top">
+          <img src="Images/website.png" alt="Project Image">
+        </div>
+        <div class="projects_card_bottom">
+          <h2>My Website</h2>
+          <p>Ironic...Used HTML, CSS, and JavaScript to build this website. For more info, check out the Github using the button below.</p>
+          <div class="exp_buttons">
+            <a href="https://github.com/ishansheth-31/independentstudy">GitHub</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="social-bar">
-  <a href="https://www.linkedin.com/in/isheth" class="social-button">
-    <img src="Images/linkedin copy.png" alt="LinkedIn">
-  </a>
-  <a href="https://github.com/ishansheth-31" class="social-button">
-    <img src="Images/github copy.png" alt="Github">
-  </a>
-  <a href="https://www.instagram.com/ishansheth31" class="social-button">
-    <img src="Images/instagram copy.png" alt="Instagram">
-  </a>
-  <a href="mailto:kevishan@gmail.com" class="social-button">
-    <img src="Images/email3 copy.png" alt="Email">
-  </a>
-</div>
+  <!-- "Floating" Socials Bar -->
+  <div class="social-bar">
+    <a href="https://www.linkedin.com/in/isheth" class="social-button">
+      <img src="Images/linkedin copy.png" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/ishansheth-31" class="social-button">
+      <img src="Images/github copy.png" alt="Github">
+    </a>
+    <a href="https://www.instagram.com/ishansheth31" class="social-button">
+      <img src="Images/instagram copy.png" alt="Instagram">
+    </a>
+    <a href="mailto:kevishan@gmail.com" class="social-button">
+      <img src="Images/email3 copy.png" alt="Email">
+    </a>
+  </div>
 
+  <!-- Footer Section -->
+  <div class="footer__container">
+      <h1>Ishan Sheth</h1>
+      <p class="website__rights">© Copyright 2023</p>
+  </div>
 
-
-
-
-
-    <!-- Footer Section -->
-    <div class="footer__container">
-        <h1>Ishan Sheth</h1>
-        <p class="website__rights">© Copyright 2023</p>
-    </div>
-      <script src="app.js"></script>
-    
+  <script src="app.js"></script>
 </body>
 </html>
