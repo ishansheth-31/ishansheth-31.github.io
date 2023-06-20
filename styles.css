@@ -67,78 +67,29 @@
     transition: all 0.3s ease;
   }
   
-  @media screen and (max-width: 960px) {
-    .navbar__container {
-      padding: 0 20px;
-    }
-  
-    .navbar__menu {
-      top: 80px;
-      height: auto;
-      background: transparent;
+  @media screen and (max-width: 600px) {
+    .navbar {
+      transition: background-color 0.3s ease;
+      background-color: #3ba4b3;
+      height: 0;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      opacity: 0;
-      transition: all 0.5s ease;
-      position: fixed;
-      width: 100%;
-      z-index: 99;
-    }
-  
-    .navbar__menu.active {
-      opacity: 1;
-      top: 80px;
-      background-color: rgba(0, 0, 0, 0.8); /* Add this line to set the black background */
-      width: 1200%; /* Add this line to make it take up the full width */
-    }
-  
-    .navbar__links {
-      padding: 1rem 0;
-    }
-  
-    #navbar__logo {
-      display: flex;
-      align-items: center;
-      position: relative;
-      z-index: 2;
-      margin: 0 auto; /* Add this line to center the logo horizontally */
-    }
-  
-    .navbar__toggle .bar {
-      width: 25px;
-      height: 3px;
-      margin: 5px auto;
-      transition: all 0.3s ease-in-out;
-      background: #fff;
-    }
-  
-    #mobile-menu {
+      font-size: 15px;
       position: absolute;
-      top: 50%;
-      right: 20px;
+      top: 8%;
       transform: translateY(-50%);
-      cursor: pointer;
-    }
-  
-    .bar {
-      display: block;
-      background-color: #fff; /* Add this line to set the background color for the bar */
-    }
-  
-    .navbar__toggle.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-  
-    .navbar__toggle.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
+      z-index: 999;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
   
+  
 
 
 
-  /* Main Page Styles */
+ /* Main Page Styles */
 .main {
   position: relative;
 }
@@ -148,7 +99,7 @@
   font-family: 'Playfair Display', serif;
   z-index: 1;
   height: 50vh;
-  transform: scale(0.9); /* Add this line to scale down the text */
+  transform: scale(0.9); /* Scale down the text */
 }
 
 .main__background {
@@ -167,7 +118,7 @@
 .main__content {
   position: relative;
   z-index: 1;
-  transform: scale(0.9); /* Add this line to scale down the text */
+  transform: scale(0.9); /* Scale down the text */
 }
 
 .main__container {
@@ -189,11 +140,11 @@
   color: rgb(255, 255, 255);
   width: 100%;
   text-align: center;
-  transform: scale(0.9); /* Add this line to scale down the text */
+  transform: scale(0.9); /* Scale down the text */
 }
 
 .main__content h1 {
-  font-size: 5rem;
+  font-size: 4.75rem;
   background-color: #ffffff;
   background-image: linear-gradient(to top, #ffffff 0%, #ffffff 100%);
   background-size: 100%;
@@ -202,6 +153,7 @@
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   margin-top: 0px;
+  white-space: nowrap; /* Ensure the heading stays on one line */
 }
 
 .main__content h2 {
@@ -214,10 +166,11 @@
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  white-space: nowrap; /* Ensure the heading stays on one line */
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .main__container {
     display: grid;
     grid-template-columns: auto;
@@ -234,12 +187,12 @@
   }
 
   .main__content h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-top: 2rem;
   }
 
   .main__content h2 {
-    font-size: 3rem;
+    font-size: 4.5rem;
   }
 
   .main__content p {
@@ -250,12 +203,12 @@
 
 @media screen and (max-width: 480px) {
   .main__content h1 {
-    font-size: 2rem;
-    margin-top: 3rem;
+    font-size: 3em;
+    margin-top: 2rem;
   }
 
   .main__content h2 {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
 
   .main__content p {
@@ -281,7 +234,7 @@
   width: 30px;
   height: 30px;
   transition: all 0.3s ease;
-  transform: scale(0.975); /* Add this line to scale down the images */
+  transform: scale(0.975); /* Scale down the images */
 }
 
 .main__arrow {
@@ -290,6 +243,7 @@
   left: 50%;
   transform: translateX(-50%);
   color: white;
+  z-index: 2; /* Increase the z-index for better accessibility */
 }
 
 .main__arrow img {
@@ -303,7 +257,7 @@
 }
 
 
-/* About Styles */
+
 .aboutme-content a {
   color: #3ba4b3;
   text-decoration: none;
@@ -358,13 +312,14 @@
   max-width: 600px;
   margin-bottom: 1.5rem;
   font-family: 'Montserrat', sans-serif;
-  text-align: center; /* Added to center the text on smaller screens */
+  text-align: center;
 }
 
 .aboutme-buttons {
   margin-top: 3rem;
-  display: flex; /* Added to enable button scaling */
-  justify-content: center; /* Added to center buttons on smaller screens */
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .aboutme-buttons a {
@@ -388,6 +343,7 @@
   height: auto;
   margin-right: 2rem;
   margin-top: -50%;
+  margin-bottom: 0;
 }
 
 @media (max-width: 1380px) {
@@ -402,10 +358,31 @@
     text-align: center;
   }
 
-  .aboutme-picture img {
-    margin-right: 0;
+  .aboutme-buttons {
     margin-top: 2rem;
-    margin-bottom: 1rem;
+  }
+
+  .aboutme-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    margin-top: -6rem; /* Adjust top margin to reduce white space */
+    margin-bottom: -6rem; 
+
+  }
+  
+  .aboutme-picture img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0;
+  }
+
+  .aboutme-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .aboutme h1 {
@@ -416,14 +393,39 @@
 
 @media (max-width: 1024px) {
   .aboutme-buttons a {
-    padding: 0.4rem 1.2rem; /* Reduce button padding for smaller screens */
-    font-size: 14px; /* Adjust button font size for smaller screens */
+    padding: 0.5rem 1rem;
+    font-size: 16px;
   }
-}
 
-@media (max-width: 768px) {
-  .aboutme {
-    padding: 4rem;
+  .aboutme-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .aboutme-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 40px;
+    margin-top: -3rem; /* Adjust top margin to reduce white space */
+    margin-bottom: -3rem; 
+  }
+  
+  .aboutme-picture img {
+    width: 150%;
+    max-width: 600px;
+    height: auto;
+    margin: 0;
+  }
+
+  .aboutme-content p {
+    font-size: 19px;
+    margin-bottom: 1rem;
+  }
+
+  .aboutme-details {
+    margin-right: 0;
   }
 }
 
@@ -433,25 +435,39 @@
   }
 
   .aboutme h2 {
-    font-size: 48px;
-    font-family: 'Montserrat', sans-serif;
-    margin-top: 0;
-    margin-bottom: 4rem;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .aboutme-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+  }
+  
+  .aboutme-picture img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0;
   }
 
   .aboutme-buttons a {
-    padding: 0.3rem 1rem; /* Further reduce button padding for smaller screens */
-    font-size: 12px; /* Adjust button font size for smaller screens */
+    padding: 0.3rem 1rem;
+    font-size: 12px;
   }
 
   .aboutme-buttons {
-    flex-direction: column; /* Stack buttons vertically on smaller screens */
-    align-items: center; /* Center buttons horizontally on smaller screens */
-    margin-top: 2rem; /* Adjust button top margin for smaller screens */
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
   }
 
   .aboutme-content p {
-    margin-bottom: 2rem; /* Increase bottom margin for smaller screens */
+    font-size: 16px;
+    margin-bottom: 1rem;
   }
 
   .aboutme-details {
@@ -459,41 +475,42 @@
   }
 
   .aboutme-picture img {
-    margin-top: 1rem; /* Adjust top margin for smaller screens */
+    margin-top: 0.5rem;
+    margin-bottom: 0;
   }
 
   .aboutme h2 {
-    font-size: 36px; /* Adjust heading font size for smaller screens */
-    text-align: center; /* Center the title on smaller screens */
-
+    font-size: 32px;
+    text-align: center;
   }
 
   .aboutme h1 {
-    font-size: 32px; /* Adjust title font size for smaller screens */
-    text-align: center; /* Center the title on smaller screens */
+    font-size: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 
-
-  /* Skills Styles */
+/* Skills Styles */
 .skills h1 {
   font-size: 48px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  padding: 1rem;
   margin-bottom: 2rem;
 }
 
 .skill-bars {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Adjust the minmax values as desired */
   grid-template-rows: repeat(3, auto);
-  gap: 4rem; /* Adjust the gap as desired */
-  margin: 0 5rem; /* Add margins on the sides */
+  gap: 6rem; /* Adjust the gap as desired */
+  margin: 0 5%; /* Use percentage-based margin instead of fixed pixel value */
   opacity: 0;
   transition: opacity 1s ease;
 }
+
 
 .skill-bars.fade-in {
   opacity: 1;
@@ -553,18 +570,21 @@
   color: #000;
 }
 
+
+
   /* Services Styles */
-.services {
-  background: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  min-height: 100vh;
-  margin-top: 8rem;
-  padding-bottom: 2rem;
-}
+  .services {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 100vh;
+    margin-top: 8rem;
+    padding-bottom: 2rem;
+  }
+  
 
 .services h1 {
   font-size: 48px;
@@ -577,15 +597,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1200px;
+  max-width: 90%; /* Adjust the maximum width as desired */
   width: 100%;
+  margin: 0 auto; /* Center the container horizontally */
 }
+
 
 .services__card {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 1000px;
+  max-width: 90%; /* Adjust the maximum width as desired */
   background-color: #fff;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -594,6 +616,7 @@
   opacity: 0;
   transition: opacity 1s ease;
 }
+
 
 .services__card.fade-in {
   opacity: 1;
@@ -644,18 +667,22 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line if necessary */
 }
 
 .exp_buttons a {
-  color: #3ba4b3;
-  text-decoration: none;
+  flex-grow: 1; /* Allow buttons to grow and fill available space */
+  max-width: 200px; /* Set a maximum width for the buttons */
   margin-right: 1rem;
   background-color: white;
   padding: 0.5rem 1rem;
   border: 2px solid #3ba4b3;
   transition: all 0.3s ease;
   border-radius: 4px;
+  /* Rest of the button styles */
 }
+
 
 .exp_buttons a:hover {
   background-color: #ffffff;
@@ -663,11 +690,34 @@
   color: #d1b58f;
 }
 
+@media screen and (max-width: 768px) {
+  /* CSS code for rearranging the cards */
+  .services__card {
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the flex direction to place the image on top */
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+    background-color: #fff;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+
+  .exp_buttons {
+gap: 0.75rem;
+  }
+  
+}
+
+
 
 @media screen and (max-width: 960px) {
   .services h1 {
     font-size: 48px;
-    margin-top: 12rem;
   }
 
   .services__card {
@@ -678,6 +728,7 @@
 @media screen and (max-width: 480px) {
   .services h1 {
     font-size: 1.2rem;
+    margin-top: 6rem; /* Adjust the margin as desired */
   }
 
   .services__image,
@@ -689,7 +740,19 @@
     max-width: 100%;
     height: auto;
   }
+
+  .exp_buttons a {
+    max-width: 100%; /* Allow the buttons to take up the full width */
+    margin-right: 0; /* Remove the right margin to prevent unnecessary spacing */
+    margin-bottom: 0.5rem; /* Add a bottom margin to separate the buttons vertically */
+  }
+
+  .services__card p {
+    font-size: 10px; /* Reduce the font size for smaller screens */
+  }
+
 }
+
 
   /* Education Styles */
 .education {
@@ -830,6 +893,8 @@
   color: #ffffff;
 }
 
+
+
   /* Projects Styles */
 .projects_wrapper {
   padding: 20px;
@@ -849,8 +914,19 @@
 .projects {
   display: flex;
   justify-content: center; /* Center the cards horizontally */
-  flex-wrap: nowrap;
+  flex-wrap: wrap; /* Allow the cards to wrap to the next line */
   gap: 40px; /* Add some spacing between the cards */
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    justify-content: center; /* Center the cards horizontally */
+  }
+
+  .projects_card {
+    width: 100%; /* Make the cards take up the full width */
+    max-width: 400px; /* Limit the maximum width of the cards */
+  }
 }
 
 .projects_card {
@@ -964,6 +1040,13 @@
 .social-button img:hover {
   opacity: 0.75;
 }
+
+@media screen and (max-width: 600px) {
+  .social-bar {
+    display: none; /* Hide the social bar on screens with a maximum width of 768px */
+  }
+}
+
 
 /* Footer Styles */
 .footer__container {
